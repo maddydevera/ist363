@@ -1,0 +1,18 @@
+div {
+    background-color: lightblue;
+    padding: 25%;
+    margin: 20%;
+    border-radius: 100%;
+    justify-content: center;
+}
+
+div:hover{
+    background-color:darkblue;
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
