@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0" />
+    <title>Submit</title>
+    
+    <style>
+
+        p {
+            width: 80px;
+            text-align: center;
+            border-radius: 10%;
+            padding: 10px;
+            position: relative;
+        }
+
+        .button{
+            background-color: white;
+            color: orange;
+            border-style: solid;
+            border-width: 2px;
+            border-color: orange;
+            animation-fill-mode: forwards;
+            transition: 0.5s;
+            position: relative;
+        }
+
+
+        .button:hover{
+            background-color:orange;
+            color: white;
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+
+        .button:active, .button:focus {
+            background-color: orange;
+            color: white;
+        }
+
+        .button:active::before, .button:focus::before{
+            content: "✓";
+            position:absolute;
+            color:white;
+            left: 10px;
+            top: 7px;
+            font-size: 18px;
+            animation: animate 0.5s ease-in-out forwards;
+        }
+
+
+        @keyframes animate {
+
+            0% {
+                transform: scale(0.5);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <p class="button" tabindex="0">Submit</p>
+</body>
+
+</html>
