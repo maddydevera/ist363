@@ -1,0 +1,155 @@
+@import "_reset";
+@import "_mixins";
+@import "_variables";
+
+header {
+    @include basic;
+    background-color: $orange;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.newsletter {
+    background-color: $lime;
+    margin: 10px;
+}
+
+.footer {
+    @include basic;
+    @extend nav;
+    background-color: $mint;
+    padding-bottom: 5px;
+    /*display: flex;
+    justify-content: center;
+    span {margin:10px;}; */
+}
+
+.latest, .older {
+    @include recipe;
+    h2{
+        color: $melon;
+        text-align: left;
+        width: 100%;
+        padding-left: 10px;
+    }
+    p {
+        color: $melon;
+        font-weight: bold;
+    }
+}
+
+.about {
+    text-align: center;
+    h2{color:$melon}
+}
+
+.newsletter {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+input[type="tel"] {
+    border: 2px solid $orange;
+    border-radius: 5px;
+}
+
+.button{
+    border-radius: 5px;
+    color: white;
+    background-color:#e89b6a; 
+    display: inline-block;
+    padding: 8px;
+    position:relative;
+    font-size: smaller;
+}
+
+.button:hover{
+    background-color: $melon;
+    color: white;
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.button:active, .button:focus {
+    background-color: $melon;
+    color: $orange;
+}
+
+.latest div, .older div{
+    @include shadow
+}
+
+.big_image {
+    img{
+        width: 100%;
+        border-radius: 10px;
+    };
+    margin: 10px;
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    p {
+        text-align: center;
+    }
+    border: 2px white;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    span {margin:10px;}
+
+}
+
+header, footer {
+    width: 100%;
+}
+
+nav span:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.stack:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 600px) {
+    .recipes-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .latest, .older {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .stack {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .recipes-container h2{
+        text-align: left;
+        width: 100%;
+        padding-left: 10px;
+    }
+}

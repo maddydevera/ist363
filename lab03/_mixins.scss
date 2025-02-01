@@ -1,0 +1,30 @@
+@mixin basic {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+@mixin recipe {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 0;
+    flex-direction: row;
+    
+    img{
+        width:100%;
+        border-top-left-radius: 10%;
+        border-top-right-radius: 10%;
+    } 
+    h2 {
+        flex: 1;
+    }; 
+    .stack {flex:1}
+}
+
+
+@mixin shadow {
+    margin: 10px;
+    box-shadow: 1px 1px 5px gray;
+    border-radius: 10%;
+}
