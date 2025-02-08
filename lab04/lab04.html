@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 04</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="">
+
+    <header class="bg-indigo-950 p-3 lg:flex">
+
+        <h1 class="text-white text-xl font-bold lg:flex-1"><span class="text-yellow-500">Orange</span> News</h1>
+
+        <nav class="text-white text-sm lg:flex lg:flex-1 hidden lg:justify-end lg:space-x-8">
+            <span>Home</span>
+            <span>Latest</span>
+            <span>Scores</span>
+            <span>Videos</span>
+            <span>More</span>
+        </nav>
+
+    </header>
+
+    <section class="text-white mx-6 mt-6">
+
+        <div class="rounded-lg overflow-hidden">
+            <div class="relative w-full h-64 lg:h-96">
+                <img src="images/campus.jpg" alt="Campus" class="w-full h-full object-cover">
+            </div>
+
+            <div class="bg-gray-900 p-3">
+
+                <h1 class="text-xl font-bold">Will the Snow Ever Thaw?</h1>
+
+                <p class="text-sm">Get the latest scoop on the weather and everything that effects the jet stream.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <article class=" m-6">
+
+        <h2 class="text-lg font-semibold pb-3">More Featured Stories</h2>
+
+        <div class="lg:flex lg:gap-3">
+
+            <div class="border p-3 rounded-lg mb-3 lg:flex-1 shadow-xl">
+                <img src="images/graduates.jpg" alt="graduates" class="rounded-lg">
+                <h3 class="font-bold pt-3">Graduation 2025</h3>
+                <p class="text-sm">Invite your friends and family to join us in May.</p>
+            </div>
+
+            <div class="border p-3 rounded-lg mb-3 lg:flex-1 shadow-xl">
+                <img src="images/runners.jpg" alt="runners" class="rounded-lg">
+                <h3 class="font-bold pt-3">Workplace Run</h3>
+                <p class="text-sm">Run a 5k with your colleagues.</p>
+            </div>
+
+            <div class="border p-3 rounded-lg mb-3 lg:flex-1 shadow-xl">
+                <img src="images/artshow.jpg" alt="art show" class="rounded-lg">
+                <h3 class="font-bold pt-3">Art Show</h3>
+                <p class="text-sm">The best art of the year on display at Schaffer</p>
+            </div>
+
+        </div>
+
+    </article>
+
+    <section class="m-6 lg:flex lg:gap-3 drop-shadow-2xl">
+
+        <div class="lg:flex-1">
+            <h2 class="text-lg font-semibold pb-3">Top Headlines</h2>
+
+            <div class="border p-3 rounded-lg mb-3 shadow-xl">
+                <h3 class="font-bold">Player X Breaks Record</h3>
+                <p class="text-sm">The record-breaking performance from Player X stunned fans everywhere...</p>
+            </div>
+
+            <div class="border p-3 rounded-lg mb-3 shadow-xl">
+                <h3 class="font-bold">Team Y Wins Championship</h3>
+                <p class="text-sm">In an epic showdown, Team Y came out on top with a historic victory...</p>
+            </div>
+
+            <div class="border p-3 rounded-lg mb-3 shadow-xl">
+                <h3 class="font-bold">Athlete Z Announces Retirement</h3>
+                <p class="text-sm">Athlete Z's retirement shocked the sports world...</p>
+            </div>
+
+        </div>
+
+        <div class="lg:flex-1">
+            <h2 class="text-lg font-semibold pb-3">Game Scores</h2>
+
+            <div>
+                <div class="border shadow-xl p-3 rounded-lg mb-3 flex justify-between">
+                    <div class="text-sm w-3/4">
+                        <p class="font-bold p-1">Game</p>
+                        <hr>
+                        <p class="p-1">Women's Hockey vs Miami</p>
+                        <p class="p-1">Men's Lacrosse vs St Bonaventure</p>
+                        <p class="p-1">Men's Basketball vs Duke</p>
+                    </div>
+
+                    <div class="text-sm w-1/4">
+                        <p class="font-bold p-1">Score</p>
+                        <hr>
+                        <p class="p-1">3 - 1</p>
+                        <p class="p-1">7 - 18</p>
+                        <p class="p-1">98 - 75</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="bg-gray-900 text-white p-3 m-6 rounded-lg pb-5 pt-5">
+
+        <h2 class="text-lg font-bold p-3">Subscribe to Our Newsletter</h2>
+
+        <p class="text-sm p-3">Stay updated with the latest news, scores, and exclusive content delivered straight to your inbox!</p>
+
+        <form class="p-3">
+            <input type="tel" id="email" name="email" placeholder="Enter your email" class="rounded-tl-lg rounded-bl-lg p-3 w-3/4"><br>
+            <p class="button bg-yellow-500 text-black text-sm p-3 rounded-tr-lg rounded-br-lg w-1/4 text-center">Subscribe</p>
+        </form>
+
+    </footer>
+
+</body>
+</html>
