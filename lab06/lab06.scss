@@ -1,0 +1,25 @@
+$primary: #82adfc;
+$warning: navy;
+$success: gold;
+$danger: rgb(242, 242, 242);
+$info: lightgray;
+$black:#eef3fc;
+$max-width-custom: 600px;
+
+.custom-carousel-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+@media (min-width: 992px) {
+    .custom-carousel-img {
+      height: 50vh; 
+    }
+  }
+
+.form-container {
+    max-width: $max-width-custom; margin: 0 auto;
+}
+
+@import '../bootstrap-5.3.3-dist/scss/bootstrap';
