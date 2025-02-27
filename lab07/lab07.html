@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7</title>
+</head>
+<body>
+    <script>
+
+        //1
+        let favNumber = 2;
+        console.log("My favorite number is " + favNumber + ".");
+
+        //2
+        let favoriteFoods = ["steak", "burgers", "ice cream", "chicken parm", "bbq chicken pizza"];
+        console.log(favoriteFoods[1]);
+        favoriteFoods.push("tacos");
+        console.log(favoriteFoods);
+
+        //3
+        for (let i = 0; i < favoriteFoods.length; i++) {
+            console.log("Favorite food " + (i + 1) + ": " + favoriteFoods[i]);
+        }
+
+        //4
+        for (let i = 0; i < favoriteFoods.length; i++) {
+            if (i === 1) {
+                continue;
+            }
+            console.log("Favorite food " + (i + 1) + ": " + favoriteFoods[i]);
+        }
+
+        //5
+        let book = {
+            title: "A Good Girls Guide To Murder",
+            author: "Holly Jackson",
+            yearPublished: "2021",
+            isAvailable: true
+        };
+
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author);
+
+        if (book.isAvailable) {
+            console.log("This book is available for checkout.");
+        } else {
+            console.log("Sorry this book is currently checked out.");
+        }
+
+        //6
+        let x = 2;
+        while (x <= 20) {
+            console.log(x);
+            x += 2;
+        }
+
+        //7
+        let dice = Math.floor(Math.random() * 10) - 4;
+        console.log(dice);
+
+    </script>
+</body>
+</html>
