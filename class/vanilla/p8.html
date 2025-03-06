@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>de Vera Participation</title>
+</head>
+<body>
+    
+    <h1 style = "text-align: center">Dog Age to Dog Years Calculator</h1>
+
+    <form id = "myForm" style = "display: flex; justify-content: center;">
+        <p>
+            Enter your dog's age in human years
+        </p>
+
+        <div style = "padding: 2px; margin-top: 10px;">
+            <input type = "text" name = "number" value = "">
+            <button type = "submit" style = "background-color: green; color: white; text-align: center;">Submit</button>
+        </div>
+    </form>
+
+    <p id = "result" style = "text-align: center; font-weight: bodld;"></p>
+
+    <script>
+        function dogYears(years) {
+            return years * 7;
+        }
+    
+        document.querySelector("#myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let input = document.querySelector("input[name='number']").value;
+            let dogAge = dogYears(parseInt(input));
+            document.querySelector("#result").innerText = `Your dog is ${dogAge} years old`;
+        });
+    </script>
+    
+
+</body>
+</html>

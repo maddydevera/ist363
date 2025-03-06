@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla 8</title>
+</head>
+<body>
+
+    <p id="pone" class="odd">one</p>
+    <p class="even">two</p>
+    <p class="odd">three</p>
+
+    <form id="myForm">
+        <input type="text" name="fname" value="Maddy">
+        <input type="text" name="lname" value="de Vera">
+        <input type="submit" value="send form">
+    </form>
+
+    <br>
+
+    <button id="hoe">
+        Sign up hoe
+    </button>
+
+    <script>
+
+        function dogYears(years) {
+            return years * 7;
+        }
+
+        let peopleAge = dogYears(14);
+        console.log(peopleAge);
+
+        //pick something by id and console log
+        let picked = document.getElementById('pone');
+        console.log(picked);
+
+        //pick by class and tag -> returns array
+        let oddTags = document.getElementsByClassName('odd');
+        for (i = 0; i < oddTags.length; i++) {
+            console.log(oddTags[i]);
+        }
+        
+        console.log('break');
+
+        let pTags = document.getElementsByTagName('p');
+        for (i = 0; i < pTags.length; i++) {
+            console.log(pTags[i]);
+        }
+
+        //getting element value from a form
+        console.log(document.getElementById("myForm").elements[0].value);
+        console.log(document.getElementById("myForm").elements[1].value);
+
+        //changing text and html in tags
+        document.getElementById('pone').innerHTML = 'four';
+        document.getElementById("myForm").elements[0].value = 'Natasha';
+        document.getElementById("myForm").elements[1].value = 'Sanguire';
+
+        //change a style
+        document.getElementById("pone").style.color = 'purple';
+        document.getElementById("pone").style.textDecoration = 'underline';
+        document.getElementsByTagName("body")[0].style.backgroundColor = 'pink';
+
+        document.getElementById('hoe').addEventListener('click', myHoe);
+
+        function myHoe () {
+            alert("da fuq");
+        }
+
+    </script>
+</body>
+</html>
