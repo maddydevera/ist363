@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9 Async</title>
+</head>
+<body>
+    <script>
+        console.log(1);
+        console.log(2);
+
+        // vvv this is our asyn statement
+        setTimeout (() => {
+            console.log('this runs after timeout');
+        }, 2000);
+
+        console.log(3);
+        console.log(4);
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Ex.</title>
+</head>
+<body>
+
+    <h1 style="color: rgb(188, 0, 128);">our first request</h1>
+
+    <div id="data"></div>
+
+    <script>
+
+        //step four = use the data
+
+        function reportResults (response) {
+            let browserData = '';
+            //console.log(response);
+            if (response != 'error') {
+                const myData = JSON.parse(response); //changes text to arrays and object
+                //console.log(myData);
+                for (i=0; i< myData.length; i++) { //looping JSON parsed objects and arrays - in this case array
+                    //console.log(myData[i].title);
+                    browserData = browserData + myData[i].title + '<br>'; //setting the variable = to the title text
+                }
+            }
+            document.getElementById('data').innerHTML = browserData;
+        }
+        
+
+        endpoint = 'https://jsonplaceholder.typicode.com/todos/';
+
+        //step one = make a request object
+
+        const request = new XMLHttpRequest; //makes an object to make request
+
+        //step two = check the status of request
+
+        request.addEventListener('readystatechange', () => { //listening for a state change / request complete
+            if (request.readyState === 4 && request.status === 200) { //if request is complete (4) and data loaded (200)
+                //console.log(request, request.responseText); //log what came back
+                reportResults(request.responseText);
+            } else if (request.readyState === 4) { //if we finished and didnt get status 200
+                //console.log('Could not get data');
+                reportResults('error');
+            } 
+            //console.log(request, request.readyState);
+        })
+
+        //step three = open end point and send request
+
+        request.open('GET', endpoint); //sets up kind of request and endpoint
+        request.send(); //actually getting data
+
+
+        //1.
+        console.log(parsedData.product);
+
+        //2.
+        console.log(parsedData.specs.brand);
+
+        //3.
+        console.log(parsedData.features[0]);
+
+
+    </script>
+</body>
+</html>
