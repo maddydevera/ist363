@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concert Log</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50">
+
+    <header class="bg-gray-100 shadow p-4 flex items-center justify-between">
+
+        <h1 class="text-xl font-bold text-blue-500">Concert Log</h1>
+
+        <nav class="text-blue-500 font-medium space-x-4">
+            <a href="home.html" class="hover:underline">Home</a>
+            <a href="journal.html" class="hover:underline">Journal Entries</a>
+        </nav>
+
+    </header>
+
+    <main class="px-6 py-10 space-y-10">
+
+        <section class="max-w-3xl mx-auto flex flex-col lg:flex-row lg:space-x-[30px]">
+
+            <div class="w-full bg-white p-4 border rounded shadow text-center">
+
+                <h2 class="text-2xl font-bold text-center">Find A Concert</h2>
+
+                <div class="mt-4 w-full">
+
+                    <input type="text" placeholder="Artists, Cities, or Dates" class="w-full p-2 border border-gray-300 rounded shadow-sm" />
+
+                    <div class="relative mt-4">
+
+                        <select class="w-full p-2 border border-gray-300 rounded shadow-sm">
+                            <option>Select...</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="w-full bg-white p-4 border rounded shadow text-center mt-10 lg:mt-0">
+
+                <h2 class="text-2xl font-bold text-center">Concert Calendar</h2>
+
+                <div class="flex justify-center mt-4">
+
+                    <div class="bg-white p-4 border rounded shadow">
+
+                        <div class="flex justify-between items-center mb-2">
+                            <button>&lt;</button>
+                            <span>January 2025</span>
+                            <button>&gt;</button>
+                        </div>
+
+                        <div class="grid grid-cols-7 gap-2 text-sm">
+                            <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
+                            <span class="text-gray-400">1</span><span class="text-gray-400">2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+                            <span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
+                            <span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span>
+                            <span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span>
+                            <span>29</span><span>30</span><span>31</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="max-w-3xl mx-auto bg-white p-6 border rounded shadow">
+
+            <h2 class="text-xl font-bold text-center">Concert</h2>
+
+            <p class="text-center text-sm text-gray-600 mb-4">Keep track of the concerts you’ve been to and log the details!</p>
+
+            <form class="space-y-4">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Artist" class="p-2 border rounded w-full" />
+                    <input type="text" placeholder="Location" class="p-2 border rounded w-full" />
+                    <input type="date" class="p-2 border rounded w-full" />
+                    <input type="file" class="p-2 border rounded w-full" />
+                </div>
+
+                <textarea placeholder="Your Message..." class="w-full p-2 border rounded"></textarea>
+
+                <div class="flex justify-center space-x-1 text-yellow-400">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Submit</button>
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
