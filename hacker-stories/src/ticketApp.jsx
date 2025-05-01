@@ -3,26 +3,31 @@ import Home from './components/Home';
 import ConcertCalendar from './components/ConcertCalendar';
 import JournalEntries from './components/JournalEntries';
 
+// Main App Component
 const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
   const [savedConcerts, setSavedConcerts] = useState([]);
   const [journalEntries, setJournalEntries] = useState([]);
 
   useEffect(() => {
+    // Load saved concerts and journal entries from localStorage on component mount
     const loadedConcerts = JSON.parse(localStorage.getItem('savedConcerts')) || [];
     const loadedEntries = JSON.parse(localStorage.getItem('journalEntries')) || [];
     setSavedConcerts(loadedConcerts);
     setJournalEntries(loadedEntries);
   }, []);
 
+  // Update localStorage when savedConcerts changes
   useEffect(() => {
     localStorage.setItem('savedConcerts', JSON.stringify(savedConcerts));
   }, [savedConcerts]);
 
+  // Update localStorage when journalEntries changes
   useEffect(() => {
     localStorage.setItem('journalEntries', JSON.stringify(journalEntries));
   }, [journalEntries]);
 
+  // Add a concert to savedConcerts
   const addConcert = (concert) => {
     if (!savedConcerts.some(c => c.id === concert.id)) {
       setSavedConcerts([...savedConcerts, concert]);
@@ -31,6 +36,7 @@ const App = () => {
     return false;
   };
 
+  // Add a journal entry
   const addJournalEntry = (entry) => {
     setJournalEntries([...journalEntries, entry]);
   };

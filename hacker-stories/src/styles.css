@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f3f4f6; 
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #1f2937; 
+}
+
+/* Header */
+.header {
+  background-color: #ef5abd;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.nav a {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.nav a:hover {
+  background-color: #ef5abd;
+}
+
+/* Main section */
+.main {
+  padding: 40px;
+}
+
+/* Section styling */
+.section {
+  margin-bottom: 40px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Concert Search Styles */
+.concert-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.concert-search input {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.concert-search button {
+  background-color: #ef5abd;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+}
+
+.concert-search button:hover {
+  background-color: #ef5abd;
+}
+
+.concert-search ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.concert-search li {
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.concert-search li button {
+  background-color: #ef5abd;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+.concert-search li button:hover {
+  background-color: #ef5abd;
+}
+
+/* Calendar Styles */
+.calendar {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.calendar-header button {
+  background-color: #ef5abd;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.calendar-header button:hover {
+  background-color: #ef5abd;
+}
+
+.calendar-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.calendar-day {
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.calendar-day:hover {
+  background-color: #d1d5db;
+}
+
+.calendar-day.has-event {
+  background-color: #ef5abd;
+  color: white;
+  font-weight: bold;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #f3f4f6;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+}
