@@ -6,7 +6,7 @@ const Home = ({ addConcert }) => {
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const apiKey = 't4JINbEvueAlp7iEOUrjGUQgL2PzLbch'; 
+  const apiKey = 't4JINbEvueAlp7iEOUrjGUQgL2PzLbch';
 
   const handleSearch = async () => {
     if (!searchTerm) return;
@@ -45,7 +45,7 @@ const Home = ({ addConcert }) => {
     const newConcert = {
       id: event.id,
       title: event.name,
-      artist: event.name, 
+      artist: event.name,
       venue: event._embedded?.venues?.[0]?.name || 'Unknown Venue',
       date: event.dates.start.localDate,
       time: event.dates.start.localTime || '',
@@ -66,8 +66,8 @@ const Home = ({ addConcert }) => {
       <h2 className="text-2xl font-bold mb-6">Find A Concert</h2>
       
       <div className="mb-8">
-        <div className="flex flex-col md:flex-row gap-4 items-end">
-          <div className="flex-1">
+        <div className="flex flex-col gap-4">
+          <div>
             <label className="block text-gray-700 font-semibold mb-2">Search by:</label>
             <select 
               className="w-full p-2 border border-gray-300 rounded"
@@ -80,7 +80,7 @@ const Home = ({ addConcert }) => {
             </select>
           </div>
           
-          <div className="flex-1">
+          <div>
             <label className="block text-gray-700 font-semibold mb-2">
               {searchType === 'artist' ? 'Artist Name' : 
                searchType === 'venue' ? 'Venue Name' : 'Date (YYYY-MM-DD)'}:
@@ -99,7 +99,7 @@ const Home = ({ addConcert }) => {
           
           <button 
             onClick={handleSearch}
-            className="bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700 transition"
+            className="bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700 transition w-full md:w-auto self-start"
             disabled={loading}
           >
             {loading ? 'Searching...' : 'Search'}
@@ -128,18 +128,18 @@ const Home = ({ addConcert }) => {
                 <strong>Date:</strong> {event.dates.start.localDate}
                 {event.dates.start.localTime && ` at ${event.dates.start.localTime}`}
               </p>
-              <div className="mt-4 flex justify-between">
+              <div className="mt-4 flex flex-col sm:flex-row gap-2 sm:justify-between">
                 <a 
                   href={event.url} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline"
+                  className="text-blue-600 hover:underline text-center sm:text-left"
                 >
                   View Details
                 </a>
                 <button
                   onClick={() => handleAddToCalendar(event)}
-                  className="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 transition"
+                  className="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 transition w-full sm:w-auto"
                 >
                   Add to Calendar
                 </button>

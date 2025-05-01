@@ -109,7 +109,7 @@ const JournalEntries = ({ journalEntries, savedConcerts, addJournalEntry }) => {
     <div className="max-w-4xl mx-auto">
       <h2 className="text-2xl font-bold mb-6">Journal Entries</h2>
       
-      <div className="bg-white p-6 rounded shadow mb-8">
+      <div className="bg-white p-4 sm:p-6 rounded shadow mb-8">
         <h3 className="text-xl font-semibold mb-4">Add New Entry</h3>
         
         <div className="mb-4">
@@ -170,7 +170,7 @@ const JournalEntries = ({ journalEntries, savedConcerts, addJournalEntry }) => {
                     key={star}
                     type="button"
                     onClick={() => setFormData(prev => ({ ...prev, rating: star }))}
-                    className="text-2xl mr-1 focus:outline-none"
+                    className="text-xl sm:text-2xl mr-1 focus:outline-none"
                   >
                     {star <= formData.rating ? '★' : '☆'}
                   </button>
@@ -192,7 +192,7 @@ const JournalEntries = ({ journalEntries, savedConcerts, addJournalEntry }) => {
           
           <button
             onClick={handleSubmit}
-            className="bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700 transition"
+            className="bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700 transition w-full sm:w-auto"
           >
             Save Journal Entry
           </button>
@@ -217,7 +217,7 @@ const JournalEntries = ({ journalEntries, savedConcerts, addJournalEntry }) => {
                     className="w-full h-48 md:h-full object-cover"
                   />
                 </div>
-                <div className="p-6 flex-1">
+                <div className="p-4 sm:p-6 flex-1">
                   <h4 className="text-xl font-semibold mb-2">{entry.artist}</h4>
                   <p className="text-gray-700 mb-1"><strong>Venue:</strong> {entry.venue}</p>
                   <p className="text-gray-700 mb-1">

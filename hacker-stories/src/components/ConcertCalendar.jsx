@@ -77,17 +77,17 @@ const ConcertCalendar = ({ savedConcerts, setCurrentPage }) => {
     <div className="max-w-4xl mx-auto">
       <h2 className="text-2xl font-bold mb-6">Concert Calendar</h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="md:col-span-2">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-2 order-2 lg:order-1">
           <div className="bg-white p-4 rounded shadow">
-            <div className="flex justify-between items-center mb-4">
+            <div className="flex flex-wrap justify-between items-center mb-4">
               <button
                 onClick={prevMonth}
                 className="p-2 rounded hover:bg-gray-200"
               >
                 &lt;
               </button>
-              <h3 className="text-xl font-semibold">{formatMonthYear(currentMonth)}</h3>
+              <h3 className="text-xl font-semibold px-2">{formatMonthYear(currentMonth)}</h3>
               <button
                 onClick={nextMonth}
                 className="p-2 rounded hover:bg-gray-200"
@@ -96,7 +96,7 @@ const ConcertCalendar = ({ savedConcerts, setCurrentPage }) => {
               </button>
               <button
                 onClick={goToToday}
-                className="ml-4 bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
+                className="ml-auto mt-2 sm:mt-0 bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
               >
                 Today
               </button>
@@ -104,14 +104,14 @@ const ConcertCalendar = ({ savedConcerts, setCurrentPage }) => {
             
             <div className="grid grid-cols-7 gap-1">
               {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
-                <div key={day} className="text-center font-semibold p-2">
+                <div key={day} className="text-center font-semibold p-1 text-xs sm:text-sm md:p-2">
                   {day}
                 </div>
               ))}
               
               {calendarDays.map((day, index) => {
                 if (!day) {
-                  return <div key={`blank-${index}`} className="p-2"></div>;
+                  return <div key={`blank-${index}`} className="p-1 sm:p-2"></div>;
                 }
                 
                 const isToday = formatDate(day) === formatDate(new Date());
@@ -121,7 +121,7 @@ const ConcertCalendar = ({ savedConcerts, setCurrentPage }) => {
                 return (
                   <div 
                     key={day.toString()}
-                    className={`relative p-2 text-center border h-14 cursor-pointer ${
+                    className={`relative p-1 sm:p-2 text-center border h-10 sm:h-14 cursor-pointer ${
                       isToday ? 'bg-blue-100' : ''
                     } ${
                       isSelected ? 'bg-blue-200' : ''
@@ -130,11 +130,11 @@ const ConcertCalendar = ({ savedConcerts, setCurrentPage }) => {
                     onMouseLeave={() => handleDateHover(null)}
                     onClick={() => handleDateClick(day)}
                   >
-                    <span>{day.getDate()}</span>
+                    <span className="text-xs sm:text-base">{day.getDate()}</span>
                     
                     {hasConcert && (
                       <div 
-                        className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-blue-600 rounded-full"
+                        className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-600 rounded-full"
                       ></div>
                     )}
                   </div>
@@ -144,7 +144,7 @@ const ConcertCalendar = ({ savedConcerts, setCurrentPage }) => {
           </div>
         </div>
         
-        <div className="bg-white p-4 rounded shadow">
+        <div className="bg-white p-4 rounded shadow order-1 lg:order-2 mb-6 lg:mb-0">
           {selectedDate ? (
             <div>
               <h3 className="text-xl font-semibold mb-4">
